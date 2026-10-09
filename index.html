@@ -207,6 +207,16 @@
             font-size: 0.85rem;
             text-align: center;
         }
+        .logo {
+            display: inline-block;
+            height: 32px;
+            width: auto;
+            /* hide the logo's white background on the page */
+            mix-blend-mode: multiply;
+        }
+        @media (prefers-color-scheme: dark) {
+            .logo { filter: invert(1); mix-blend-mode: screen; }
+        }
 
         @media (max-width: 560px) {
             .hero-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
@@ -387,7 +397,9 @@
             </div>
         </section>
 
-        <footer>swxtted.com</footer>
+        <footer>
+            <img class="logo" src="logo.png" alt="swxtted.com" width="172" height="32">
+        </footer>
     </main>
 </body>
 </html>
